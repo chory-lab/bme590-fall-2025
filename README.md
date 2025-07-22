@@ -3,22 +3,28 @@
 Welcome to the official class repository for Fall 2025 BME 590: Laboratory Automation!
 
 **Professor**: Emma Chory, Ph.D.
+
 **Teaching Assistant:** Benjamin Perry
 
 ---
 
-This README will provide all the necessary steps to set up your computer for class assignments, tutorials, and projects. We will install all necessary tools, including Python and the `pylabrobot` library. Please follow these steps in order and if you run into any issues, please send an issue to the \#code channel in slack! Additionally, you can contact Ben or Professor Chory or attend office hours.
+This README will provide all the necessary steps to set up your computer for class assignments, tutorials, and projects. We will install all necessary tools, including Python and the `pylabrobot` library, which is the core Python library we will use to control laboratory equipment. Please follow these steps in order and if you run into any issues, please send an issue to the \#code channel in slack! Additionally, you can contact Ben or Professor Chory or attend office hours.
 
 ---
 
 ## Step 1: Install Foundational Tools (VS Code & Git)
 
-Before we can work with Python, we need a code editor and a version control system.
+Before we can work with Python, we need a code editor and a version control system. [**If you already have these installed, you may skip to Step 2.**]
 
-1. **Install VS Code**: This is our recommended code editor for this class. Please install the version relevant to your operating system at the following link. After installation, you should be able to open Visual Studio Code on your computer.
-    * [**code.visualstudio.com**](https://code.visualstudio.com/)
+1. **Install VS Code**: This is our recommended code editor for this class. Please install the version relevant to your operating system at the following link. After installation, you should be able to open Visual Studio Code on your computer. We ask, unless you certainly know what you are doing, to stick with VS code for this class as it will make debugging IDE issues consistent.
 
-2. **Install Git**: This tool lets us download and manage the project code.
+* [**code.visualstudio.com**](https://code.visualstudio.com/)
+
+If you have installed it properly, you should see a setup screen similar to the screenshot below:
+
+![Screenshot of VS Code Setup Screen on Mac](/figs/vscode_ss.png)
+
+2. **Install Git**: This tool lets us download and manage the project code from GitHub. Additionally, although we will not make heavy use of version control in this class, managing versions of software as they involve is critical in software engineering, especially when working on a team on a project that needs to be collaborative (as science often is).
     * [**git-scm.com/downloads**](https://git-scm.com/downloads)
     * During installation, you can accept all the default settings.
 
