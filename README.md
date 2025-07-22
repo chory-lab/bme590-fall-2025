@@ -1,8 +1,13 @@
-# 🚀 Welcome to Our Class Project
+# 🚀 BME 590 - Laboratory Automation Class Repository
 
-This guide provides all the steps needed to set up your computer for our project. We will install all necessary tools, including Python and the `pylabrobot` library. Please follow these steps in order.
+Welcome to the official class repository for Fall 2025 BME 590: Laboratory Automation!
 
-The total setup time is approximately 20-30 minutes.
+**Professor**: Emma Chory, Ph.D.
+**Teaching Assistant:** Benjamin Perry
+
+---
+
+This README will provide all the necessary steps to set up your computer for class assignments, tutorials, and projects. We will install all necessary tools, including Python and the `pylabrobot` library. Please follow these steps in order and if you run into any issues, please send an issue to the \#code channel in slack! Additionally, you can contact Ben or Professor Chory or attend office hours.
 
 ---
 
@@ -10,7 +15,7 @@ The total setup time is approximately 20-30 minutes.
 
 Before we can work with Python, we need a code editor and a version control system.
 
-1. **Install VS Code**: This will be our code editor. Download it from the official website:
+1. **Install VS Code**: This is our recommended code editor for this class. Please install the version relevant to your operating system at the following link. After installation, you should be able to open Visual Studio Code on your computer.
     * [**code.visualstudio.com**](https://code.visualstudio.com/)
 
 2. **Install Git**: This tool lets us download and manage the project code.
