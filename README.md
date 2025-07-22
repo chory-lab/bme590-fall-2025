@@ -67,7 +67,7 @@ Conda is a package manager that will install Python and all our required librari
 
 2. **Restart Your Terminal**: Close and reopen your terminal (or VS Code) for the changes to take effect.
 
-3. Test your install by running `conda --version`. At this point if you get an error along the lines of `conda command not found` then please raise an issue in slack or contact Ben.
+3. **Test Conda:** Test your install by running `conda --version`. At this point if you get an error along the lines of `conda command not found` then please raise an issue in slack or contact Ben.
 
 ---
 
