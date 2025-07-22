@@ -45,7 +45,7 @@ From here, we recommend **creating a folder** somewhere on your computer (e.g. d
         ```
 
     - After it finishes, **restart your computer**. When it reboots, it will ask you to create a username and password for your new Linux system. Remember these! Optionally, do not set a password so you don't have to deal with downstream issues to forgetting your Linux password.
-    - Finally, to use with VS Code, navigate within VS Code to **Extensions -> Search -> WSL -> Install**. You can then use VS Code with the following pattern:
+    - Finally, to use with VS Code, navigate within VS Code to **Extensions -> Search -> WSL -> Install** (it is the one authored by Microsoft). You can then use VS Code with the following pattern:
 
         1. Open WSL from Windows Explorer (this should open a terminal window)
         2. Using the change directory (`cd`) command, navigate to your projects folder [you may have to make this with the make directory command (`mkdir`)].
@@ -56,25 +56,18 @@ From here, we recommend **creating a folder** somewhere on your computer (e.g. d
 
 ## Step 2: Install Conda for Python Management
 
-Conda is a package manager that will install Python and all our required libraries in an isolated environment, preventing conflicts.
+Conda is a package manager that will install Python and all our required libraries in an isolated environment. Because different projects require different **versions** of different packages and Python, using the same set of software for all your projects will likely lead to **conflicts**. Conda allows us to create an individualized environemtn **specific to this class**, with its own version of Python, NumPy, PyLabRobot, and other packages that are independent from the other packages you may have installed on your system. **Again, if you already have conda installed, you may skip this step.**
 
 1. **Download Miniconda**: We'll use Miniconda, a minimal installer for Conda.
-    - [**docs.conda.io/en/latest/miniconda.html**](https://docs.conda.io/en/latest/miniconda.html)
-    - **Windows**: Download the **Windows installer**.
-    - **macOS**: Download the **macOS (pkg)** installer for your chip (M1/M2/M3 is "Apple silicon").
-    - **Linux/WSL**: Download the **Linux installer**.
+    - [**Install Link**](https://docs.conda.io/en/latest/miniconda.html)
+    - **Windows**: Again, it is **highly recommended** to use **WSL**, in which case you can follow the Linux/WSL instructions two bullets down. However, if using Windows, navigate to the **Windows PowerShell** install option. Open **Windows PowerShell** and copy/paste the commands listed.
+    - **macOS**: Navigate to the code block for your chip (M1/M2/M3/M4 is "Apple silicon") and copy/paste the commands listed.
+    - **Linux/WSL**: Navigate to the **Linux** tab and copy-paste the commands listed.
+    - Make sure to enter `yes` when agreeing to the terms of service.
 
-2. **Run the Installer**:
-    - **Windows/macOS**: Double-click the downloaded file and follow the on-screen instructions. Accept the default settings.
-    - **Linux/WSL**: Open your Linux terminal and run the following command, replacing `<installer_name.sh>` with the name of the file you downloaded.
+2. **Restart Your Terminal**: Close and reopen your terminal (or VS Code) for the changes to take effect.
 
-        ```bash
-        bash <installer_name.sh>
-        ```
-
-        Press `Enter` and type `yes` to agree to the terms.
-
-3. **Restart Your Terminal**: Close and reopen your terminal (or VS Code) for the changes to take effect.
+3. Test your install by running `conda --version`. At this point if you get an error along the lines of `conda command not found` then please raise an issue in slack or contact Ben.
 
 ---
 
