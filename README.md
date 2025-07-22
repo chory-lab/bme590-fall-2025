@@ -18,25 +18,39 @@ Before we can work with Python, we need a code editor and a version control syst
 
 1. **Install VS Code**: This is our recommended code editor for this class. Please install the version relevant to your operating system at the following link. After installation, you should be able to open Visual Studio Code on your computer. We ask, unless you certainly know what you are doing, to stick with VS code for this class as it will make debugging IDE issues consistent.
 
-* [**code.visualstudio.com**](https://code.visualstudio.com/)
+    - [**code.visualstudio.com**](https://code.visualstudio.com/)
 
 If you have installed it properly, you should see a setup screen similar to the screenshot below:
 
 ![Screenshot of VS Code Setup Screen on Mac](/figs/vscode_ss.png)
 
-2. **Install Git**: This tool lets us download and manage the project code from GitHub. Additionally, although we will not make heavy use of version control in this class, managing versions of software as they involve is critical in software engineering, especially when working on a team on a project that needs to be collaborative (as science often is).
-    * [**git-scm.com/downloads**](https://git-scm.com/downloads)
-    * During installation, you can accept all the default settings.
+From here, we recommend **creating a folder** somewhere on your computer (e.g. docs/classes/bme-590-fall/) to store your code and project. You can open that folder in VS Code by simply **Open Folder -> \<path_to_folder_you_created\>**
 
-3. **(Windows Users Only) Install WSL**: The Windows Subsystem for Linux (WSL) lets you run a Linux environment directly on Windows. It's highly recommended for a smoother experience.
-    * Open **PowerShell as an Administrator** (search for PowerShell, right-click, and select "Run as administrator").
-    * Run this single command:
+2. **Install Git**: This tool lets us download and manage the project code from GitHub. Additionally, although we will not make heavy use of version control in this class, managing versions of software as they involve is critical in software engineering, especially when working on a team on a project that needs to be collaborative and reproducible (as science often is). If you are interested in reading more about Git, see [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).
+    - [**git-scm.com/downloads**](https://git-scm.com/downloads)
+        - For Mac, open the **terminal** then install [brew](https://brew.sh/) if not installed, then follow the **Homebrew Git Install Instructions** on the link above.
+        - For Windows users, it is **highly recommended** to install Windows Subsystem for Linux (WSL) first (see below) then follow the **Debian/Ubuntu Git Install Instructions**. To do this, first follow **Step 1.3** below, then return to install Git. But, if you wish to use Windows, utilize the **Click here to download** button on the Windows install page.
+        - To confirm you have installed Git successfully, run the following in either **PowerShell, WSL, or the Mac Terminal**. You should see something similar to `git version 2.XX.X`
+
+            ```bash
+            git --version
+            ```
+
+3. **(Windows Users Only) Install WSL**: The Windows Subsystem for Linux (WSL) lets you run a Linux environment directly on Windows. It's highly recommended for a smoother experience overall. Most coding packages may work on Windows, but all coding packages (with extremely few exceptions) work on Linux. If you'd like to read more on WSL, see [here](https://learn.microsoft.com/en-us/windows/wsl/about). For more information on how to use WSL with VS Code (**recommended reading!**), see [here](https://code.visualstudio.com/docs/remote/wsl)
+    - Open **PowerShell as an Administrator** (search for PowerShell, right-click, and select "Run as administrator").
+    - Run this single command:
 
         ```powershell
         wsl --install
         ```
 
-    * After it finishes, **restart your computer**. When it reboots, it will ask you to create a username and password for your new Linux system. Remember these!
+    - After it finishes, **restart your computer**. When it reboots, it will ask you to create a username and password for your new Linux system. Remember these! Optionally, do not set a password so you don't have to deal with downstream issues to forgetting your Linux password.
+    - Finally, to use with VS Code, navigate within VS Code to **Extensions -> Search -> WSL -> Install**. You can then use VS Code with the following pattern:
+
+        1. Open WSL from Windows Explorer (this should open a terminal window)
+        2. Using the change directory (`cd`) command, navigate to your projects folder [you may have to make this with the make directory command (`mkdir`)].
+        3. Once in your target folder, simply run `code .` and VS Code will open.
+        4. Optionally, you can open WSL from VS Code (i.e. the converse to this process just described)
 
 ---
 
@@ -45,14 +59,14 @@ If you have installed it properly, you should see a setup screen similar to the 
 Conda is a package manager that will install Python and all our required libraries in an isolated environment, preventing conflicts.
 
 1. **Download Miniconda**: We'll use Miniconda, a minimal installer for Conda.
-    * [**docs.conda.io/en/latest/miniconda.html**](https://docs.conda.io/en/latest/miniconda.html)
-    * **Windows**: Download the **Windows installer**.
-    * **macOS**: Download the **macOS (pkg)** installer for your chip (M1/M2/M3 is "Apple silicon").
-    * **Linux/WSL**: Download the **Linux installer**.
+    - [**docs.conda.io/en/latest/miniconda.html**](https://docs.conda.io/en/latest/miniconda.html)
+    - **Windows**: Download the **Windows installer**.
+    - **macOS**: Download the **macOS (pkg)** installer for your chip (M1/M2/M3 is "Apple silicon").
+    - **Linux/WSL**: Download the **Linux installer**.
 
 2. **Run the Installer**:
-    * **Windows/macOS**: Double-click the downloaded file and follow the on-screen instructions. Accept the default settings.
-    * **Linux/WSL**: Open your Linux terminal and run the following command, replacing `<installer_name.sh>` with the name of the file you downloaded.
+    - **Windows/macOS**: Double-click the downloaded file and follow the on-screen instructions. Accept the default settings.
+    - **Linux/WSL**: Open your Linux terminal and run the following command, replacing `<installer_name.sh>` with the name of the file you downloaded.
 
         ```bash
         bash <installer_name.sh>
@@ -69,8 +83,8 @@ Conda is a package manager that will install Python and all our required librari
 Now we will download the project code and create a dedicated Conda environment for it.
 
 1. **Open Your Terminal**:
-    * **Windows**: Open the **WSL terminal**. You can find it in your Start Menu (it will be named "Ubuntu" or similar).
-    * **macOS/Linux**: Open the standard **Terminal** app.
+    - **Windows**: Open the **WSL terminal**. You can find it in your Start Menu (it will be named "Ubuntu" or similar).
+    - **macOS/Linux**: Open the standard **Terminal** app.
 
 2. **Clone the Project Repository**: Run the following command to download the project code. Replace `<your-class-repo-url>` with the actual URL for this repository.
 
@@ -111,8 +125,8 @@ With our environment active, we can now install the specific Python libraries we
     pip install -e "./pylabrobot[visualizer,opentrons]"
     ```
 
-    * **-e** means "editable," so changes you make to the code are reflected immediately.
-    * The `[...]` part installs the extra features we need.
+    - **-e** means "editable," so changes you make to the code are reflected immediately.
+    - The `[...]` part installs the extra features we need.
 
 🎉 **Setup complete!** Your environment is ready.
 
