@@ -18,7 +18,7 @@ Before we can work with Python, we need a code editor and a version control syst
 
 1. **Install VS Code**: This is our recommended code editor for this class. Please install the version relevant to your operating system at the following link. After installation, you should be able to open Visual Studio Code on your computer. We ask, unless you certainly know what you are doing, to stick with VS code for this class as it will make debugging IDE issues consistent.
 
-    - [**code.visualstudio.com**](https://code.visualstudio.com/)
+    - [**Install Link**](https://code.visualstudio.com/)
 
 If you have installed it properly, you should see a setup screen similar to the screenshot below:
 
@@ -27,7 +27,7 @@ If you have installed it properly, you should see a setup screen similar to the 
 From here, we recommend **creating a folder** somewhere on your computer (e.g. docs/classes/bme-590-fall/) to store your code and project. You can open that folder in VS Code by simply **Open Folder -> \<path_to_folder_you_created\>**
 
 2. **Install Git**: This tool lets us download and manage the project code from GitHub. Additionally, although we will not make heavy use of version control in this class, managing versions of software as they involve is critical in software engineering, especially when working on a team on a project that needs to be collaborative and reproducible (as science often is). If you are interested in reading more about Git, see [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).
-    - [**git-scm.com/downloads**](https://git-scm.com/downloads)
+    - [**Install Link**](https://git-scm.com/downloads)
         - For Mac, open the **terminal** then install [brew](https://brew.sh/) if not installed, then follow the **Homebrew Git Install Instructions** on the link above.
         - For Windows users, it is **highly recommended** to install Windows Subsystem for Linux (WSL) first (see below) then follow the **Debian/Ubuntu Git Install Instructions**. To do this, first follow **Step 1.3** below, then return to install Git. But, if you wish to use Windows, utilize the **Click here to download** button on the Windows install page.
         - To confirm you have installed Git successfully, run the following in either **PowerShell, WSL, or the Mac Terminal**. You should see something similar to `git version 2.XX.X`
@@ -79,53 +79,32 @@ Now we will download the project code and create a dedicated Conda environment f
     - **Windows**: Open the **WSL terminal**. You can find it in your Start Menu (it will be named "Ubuntu" or similar).
     - **macOS/Linux**: Open the standard **Terminal** app.
 
-2. **Clone the Project Repository**: Run the following command to download the project code. Replace `<your-class-repo-url>` with the actual URL for this repository.
+2. **Clone the Project Repository**: Run the following command to download the project code.
 
     ```bash
-    git clone <your-class-repo-url>
+    git clone https://github.com/chory-lab/bme590-fall-2025.git
     ```
 
 3. **Navigate into the Project Folder**:
 
     ```bash
-    cd <name-of-the-cloned-folder>
+    cd bme590-fall-2025
     ```
 
-4. **Create and Activate the Conda Environment**: This command creates a new, clean environment named `robotics-env` with Python 3.10.
+4. **Create and Activate the Conda Environment**: This command creates a new, clean environment named `lab-automation` with Python 3.13.
 
     ```bash
-    conda create --name robotics-env python=3.10 -y
-    conda activate robotics-env
+    conda env create -f environment.yaml
+    conda activate lab-automation
     ```
 
-    ✅ Your terminal prompt should now start with `(robotics-env)`. You must do this every time you work on the project!
+    Your terminal prompt should now start with `(lab-automation)` and you are all set! **Note:** In order to use your environment within VS Code, You will need to install the **Python** extension. (More on this in section below).
 
 ---
 
-## Step 4: Install Project Libraries
+## Step 5. How to Select Environment from VS Code
 
-With our environment active, we can now install the specific Python libraries we need.
-
-1. **Install Jupyter and Core Libraries**: We'll install Jupyter Notebook from the trusted `conda-forge` channel.
-
-    ```bash
-    conda install jupyter notebook -c conda-forge -y
-    ```
-
-2. **Install `pylabrobot` with Extras**: This command installs the `pylabrobot` library located in this repository, along with the `visualizer` and `opentrons` modules.
-
-    ```bash
-    pip install -e "./pylabrobot[visualizer,opentrons]"
-    ```
-
-    - **-e** means "editable," so changes you make to the code are reflected immediately.
-    - The `[...]` part installs the extra features we need.
-
-🎉 **Setup complete!** Your environment is ready.
-
----
-
-## How to Start Working (Daily Workflow)
+## Step 6. Daily Workflow
 
 Each time you want to work on the project, follow these simple steps:
 
