@@ -98,11 +98,21 @@ Now we will download the project code and create a dedicated Conda environment f
     conda activate lab-automation
     ```
 
-    Your terminal prompt should now start with `(lab-automation)` and you are all set! **Note:** In order to use your environment within VS Code, You will need to install the **Python** extension. (More on this in section below).
+    Your terminal prompt should now start with `(lab-automation)` and you are all set! **Note:** In order to easily use your environment within VS Code, You will need to install the **Python** extension. (More on this in section below).
 
 ---
 
 ## Step 5. How to Select Environment from VS Code
+
+1. **Install Extension**: Navigate to the left-hand panel to the **Extensions** and in the bar entitled "Search Extensions in Marketplace", search for the following packages and click **"Install"**.
+    - **Python** - This extension will configure VS Code with several useful debugging, linting, virtual environment, and other tools for coding in Python.
+        - Example: ![Python Language Extension Highlight on VS Code](/figs/python_ext.png)
+
+    - **Jupyter** - The assignments in this class will make heavy use of **Jupyter Notebook**, which is an interactive coding environment (i.e. you can run individual "blocks" of code and interleave markdown text in assignment write-ups). Normally, you would run `jupyter notebook` from the command line in your proejct folder to open a browser-based editor; however, this extension allows you to open notebooks directly in VS Code.
+        - Example: ![Jupyter Language Extension Highlight on VS Code](/figs/jupyter_ext.png)
+
+    - **WSL (Windows Users Only)** - WSL maintains an entire sub-operating system (subsystem) with its own folders in Linux. Normally, to access these, you would need to open up WSL then navigate to your folder of interest, then open VS Code. This extension allows you to directly connect to your own machine's WSL from VS Code, essentially treating your Linux folders as a normal Windows directory.
+        - Example: ![WSL Extension Highlight on VS Code](/figs/wsl_ext.png)
 
 ## Step 6. Daily Workflow
 
