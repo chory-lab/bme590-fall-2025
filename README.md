@@ -102,7 +102,7 @@ Now we will download the project code and create a dedicated Conda environment f
 
 ---
 
-## Step 5. How to Select Environment from VS Code
+## Step 4. How to Select Environment from VS Code
 
 1. **Install Extension**: Navigate to the left-hand panel to the **Extensions** and in the bar entitled "Search Extensions in Marketplace", search for the following packages and click **"Install"**.
     - **Python** - This extension will configure VS Code with several useful debugging, linting, virtual environment, and other tools for coding in Python.
