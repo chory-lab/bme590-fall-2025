@@ -114,19 +114,30 @@ Now we will download the project code and create a dedicated Conda environment f
     - **WSL (Windows Users Only)** - WSL maintains an entire sub-operating system (subsystem) with its own folders in Linux. Normally, to access these, you would need to open up WSL then navigate to your folder of interest, then open VS Code. This extension allows you to directly connect to your own machine's WSL from VS Code, essentially treating your Linux folders as a normal Windows directory.
         - Example: ![WSL Extension Highlight on VS Code](/figs/wsl_ext.png)
 
-## Step 6. Daily Workflow
+2. **Activate Conda Environment**: Once you have VS Code, Git, your VS Code extensions, and Conda installed and working on your computer, your project workflow will occur along the following steps:
+    - **Starting from VS Code**
+        - Open VS Code on Mac or Windows
+        - Go to **Explorer -> Open Folder** and open your projects folder where you plan to store your work for this class. (ideally, this should be the same folder that this repository is stored in.)
+            - **WSL Users** - Follow the instructions [here](https://code.visualstudio.com/docs/remote/wsl) under **From VS Code** or use teh command palette (Ctrl/Cmd + Shift + P) to select **WSL: Connect to WSL** to open your Linux folders in your WSL instance.
+        - Using the command palette (Ctrl/Cmd + Shift + P), search for **Python: Select Interpreter** and then navigate the options to select the **(lab-automation)** environment.
+            - Example: ![Example in VS Code of Python Interpreter Drop Down Menu](/figs/python_int.png)
+        - Open or create a **\.ipynb** or **\.py** file in your working directory to begin your coding!
+        - Once finished, make sure to save your work locally (preferably use Git to back up your code) and exit VS Code.
+    - **Starting from Terminal**
+        - Open **WSL, PowerShell, or Mac Terminal** and navigate to your projects folder.
+        - Activate your conda environment using `conda activate lab-automation`.
+        - Open your editor of choice (CLI editors such as Neovim/etc. are not recommended unless you are proficient) such as VS Code with the `code .` command.
+            - You may optionally also use `jupyter notebook` to open a browser based editor instead of VS Code.
+        - Similarly edit and save your files as you see fit, making sure to save your work.
 
-Each time you want to work on the project, follow these simple steps:
+---
 
-1. Open your terminal (WSL for Windows).
-2. Navigate to the project directory: `cd path/to/your/project/folder`
-3. Activate the Conda environment: `conda activate robotics-env`
-4. Launch Jupyter Notebook to start coding:
+## Help Resources
 
-    ```bash
-    jupyter notebook
-    ```
+If at any point in this process you run into troubles installing the requisite software, please follow the orderIf at any point in this process you run into troubles installing the requisite software, please follow the order of steps below:
 
-This will open a new tab in your web browser where you can open and run your `.ipynb` notebooks.
-
-To stop the server, go back to your terminal and press `Ctrl+C`. To exit the environment, just type `conda deactivate`.
+1. Post an issue in the \#Issues channel on slack.
+2. Email Ben (benjamin [dot] perry [at] duke [dot] edu) with the subject line **BME 590 Code Issues**
+3. Utilize the [Duke ChatGPT Edu Language Model](https://oit.duke.edu/service/chatgpt-edu/) (Free for students)
+3. Come to office hours for Ben or Professor Chory, if they are scheduled.
+4. Email Professor Chory (emma [dot] chory [at] duke [dot] edu).
