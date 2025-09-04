@@ -1,0 +1,11 @@
+name: lab-automation
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - jupyter
+  - jsonschema
+  - pip
+  - pip:
+    - "-e ./pylabrobot[visualizer,opentrons]"

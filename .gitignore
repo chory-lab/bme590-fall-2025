@@ -1,0 +1,7 @@
+__pycache__/
+solutions/
+solution_figs/
+colab_solutions/
+*.egg-info
+.vscode
+.DS_Store
