@@ -151,16 +151,20 @@ Now we will download the project code and create a dedicated Conda environment f
 
 All of the relevant workshop documents can be found in the [workshops folder](./workshops). These Jupyter Notebook files contain all of the relevant information you will need for the exercises to work. If you have properly installed the **Jupyter Notebook** extension in VS Code, then these files should open no problem.
 
-Alternatively, we provide [Google Colab versions](./colab_workshops) of every workshop in case you have issues with PLR installation. These Colab versions use a modified version of PLR that is compatible with colab and have not been as thoroughly tested as the ones in [workshops](./workshops). To use with Colab, simply:
+---
+
+## Help Resources & Troubleshooting
+
+In this class, we encourage you to **try the above installation and run Pylabrobot locally** for several reasons:
+1. If you are targeting a career in software engineering, environment setup teaches a lot about how software works together on different operating systems, and running into issues is one of the best ways to learn one of the untaught challenges with software engineering.
+2. We would like as much of the class to be using **the same version of PLR and environment setup** to make troubleshooting easier.
+
+However, **if you have reached out to the TA and professor first**, we also provide [Google Colab versions](./colab_workshops) of every workshop in case you have issues with PLR installation. These Colab versions use a modified version of PLR that is compatible with colab and have not been as thoroughly tested as the ones in [workshops](./workshops). To use with Colab, simply:
 
 1. Download the `.ipynb` file for a given workshop.
 2. Navigate to [Google Colab](https://colab.research.google.com/)
 3. Navigate to **Upload -> Browse** and upload the workshop notebook.
 4. Follow instructions in the notebook to complete the workshop.
-
----
-
-## Help Resources
 
 If at any point in this process you run into troubles installing the requisite software, please follow the order of steps below:
 
