@@ -12,8 +12,6 @@ This README will provide all the necessary steps to set up your computer for cla
 
 Please follow these steps in order and if you run into any issues, please send an issue to the \#pylabrobot channel in slack! Additionally, you can contact Ben or Professor Chory.
 
-We are also beta testing Google Colab versions of these notebooks, which can skip a lot of the tedious environment setup. Please try the following instructions first, but if you run into issues, see **Step 5**.
-
 ---
 
 ## Step 1: Install Foundational Tools (VS Code & Git)
