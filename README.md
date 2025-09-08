@@ -28,7 +28,7 @@ If you have installed it properly, you should see a setup screen similar to the 
 
 ![Screenshot of VS Code Setup Screen on Mac](/figs/vscode_ss.png)
 
-From here, we recommend **creating a folder** somewhere on your computer (e.g. docs/classes/bme-590-fall/) to store your code and projects for this class. You can open that folder in VS Code by simply **Open Folder -> \<path_to_folder_you_created\>**
+From here, we recommend **creating a folder** somewhere on your computer (e.g. docs/classes/bme-590-fall/) to store your code and projects for this class. After cloning the repository (see **step 3**), you can open this repository in VS Code by simply **Open Folder -> \<path_to_folder_you_created\bme590-fall-2025>**
 
 2. **Install Git**: This tool lets us download and manage the project code from GitHub. Additionally, although we will not make heavy use of version control in this class, managing versions of software as they evolve is critical in software engineering, especially when working on a team on a project that needs to be collaborative and reproducible (as science often is). If you are interested in reading more about Git, see [here](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F).
     - [**Install Link**](https://git-scm.com/downloads)
@@ -113,6 +113,24 @@ Now we will download the project code and create a dedicated Conda environment f
 
    If you are using an **older Mac**, then you may run into a very specific bug where NumPy does not compile due to the lack of a high-enough version C++ compiler. If this happens to you contact Ben; you will need to uninstall and reinstall Xcode.
 
+5. **Creating your own folder for assignments**: Now that you have your environment setup, it is good practice to **create a folder** that can hold your work-in-progess assignments for two reasons:
+    - We may, at any point, update the workshops with new material or edits to fix bugs. If you `git pull` the repo while working on a workshop file, you may **unintentionally overwrite** your work, losing all progress.
+    - If, for whatefver reason, you get your file completely messed up while working on it, it is easy to simply delete the file and copy over a fresh version to work. 
+
+    Once you are in the `bme590-fall-2025` directory, run the following to create a directory for your assignments-in-progress:
+
+    ```bash
+    mkdir assignments
+    ```
+
+    Then, for **each lab**, simply **copy the workshop** from `/workshops` to `/assignments` via **VS Code** or the command line:
+
+    ```bash
+    cp workshops/<name_of_workshop>.ipynb assignments
+    ```
+
+    Now, make sure you are working and saving progress on the workshops you have copied over to `assignments/`. For all intents and purposes, this should be treated as your working directory.
+
 ---
 
 ## Step 4. How to Select Environment from VS Code
@@ -131,8 +149,9 @@ Now we will download the project code and create a dedicated Conda environment f
 2. **Activate Conda Environment**: Once you have VS Code, Git, your VS Code extensions, and Conda installed and working on your computer, your project workflow will occur along the following steps:
     - **Starting from VS Code**
         - Open VS Code on Mac or Windows
-        - Go to **Explorer -> Open Folder** and open your projects folder where you plan to store your work for this class. (ideally, this should be the same folder that this repository is stored in.)
+        - Go to **Explorer -> Open Folder** and open your projects folder where you plan to store your work for this class. (ideally, this should be the repository foler `bme590-fall-2025`)
             - **WSL Users** - Follow the instructions [here](https://code.visualstudio.com/docs/remote/wsl) under **From VS Code** or use the command palette (Ctrl/Cmd + Shift + P) to select **WSL: Connect to WSL** to open your Linux folders in your WSL instance.
+        - **Important:** Open the terminal in VS Code and run `git pull` to retrieve any updates to the course repo before beginning work.
         - Using the command palette (Ctrl/Cmd + Shift + P), search for **Python: Select Interpreter** and then navigate the options to select the **(lab-automation)** environment.
             - Example: ![Example in VS Code of Python Interpreter Drop Down Menu](/figs/python_int.png)
         - Open or create a **\.ipynb** or **\.py** file in your working directory to begin your coding!
@@ -141,6 +160,7 @@ Now we will download the project code and create a dedicated Conda environment f
     - **Starting from Terminal**
         - Open **WSL, PowerShell, or Mac Terminal** and navigate to your projects folder.
         - Activate your conda environment using `conda activate lab-automation`.
+        - **Important:** Open the terminal in VS Code and run `git pull` to retrieve any updates to the course repo before beginning work.
         - Open your editor of choice (CLI editors such as Neovim/etc. are not recommended unless you are proficient) such as VS Code with the `code .` command.
             - You may optionally also use `jupyter notebook` to open a browser based editor instead of VS Code.
         - Similarly edit and save your files as you see fit, making sure to save your work.
