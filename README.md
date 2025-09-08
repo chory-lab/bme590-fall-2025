@@ -192,7 +192,7 @@ To use with Colab, simply:
 
 If at any point in this process you run into troubles installing the requisite software, please follow the order of steps below:
 
-1. Post an issue in the \#pylabrobot channel on slack.
+1. Post an issue in the \#ed-discuss channel on slack. For anonymous question asking, use the `/anonymous` prefix before your message.
 2. Email Ben (benjamin [dot] perry [at] duke [dot] edu) with the subject line **BME 590 Code Issues**
 3. Come to office hours for Ben or Professor Chory, if scheduled.
 4. Email Professor Chory (emma [dot] chory [at] duke [dot] edu).
