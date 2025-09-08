@@ -5,3 +5,4 @@ colab_solutions/
 *.egg-info
 .vscode
 .DS_Store
+assignments/
