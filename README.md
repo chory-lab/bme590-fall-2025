@@ -94,6 +94,12 @@ Now we will download the project code and create a dedicated Conda environment f
     git clone https://github.com/chory-lab/bme590-fall-2025.git
     ```
 
+    This will install to your parent directory. If you would like to install to a different folder, such as your desktop, navigate to a new directory. For example: 
+
+   ```bash
+    cd Desktop/
+    ```
+
 3. **Navigate into the Project Folder**:
 
     ```bash
@@ -128,6 +134,10 @@ Now we will download the project code and create a dedicated Conda environment f
     ```
 
     Now, make sure you are working and saving progress on the workshops you have copied over to `assignments/`. For all intents and purposes, this should be treated as your working directory.
+
+      ```bash
+    cd assignments
+    ```
 
 ---
 
