@@ -183,7 +183,23 @@ In this class, we encourage you to **try the above installation and run Pylabrob
 1. If you are targeting a career in software engineering, environment setup teaches a lot about how software works together on different operating systems, and running into issues is one of the best ways to learn one of the untaught challenges with software engineering.
 2. We would like as much of the class to be using **the same version of PLR and environment setup** to make troubleshooting easier.
 
+---
 
+## Step 6. Updating to the Latest Version
+
+To make sure you always have the most recent versions of the course materials and workshops:
+
+- **From VS Code**
+  - Open the integrated terminal in VS Code (``Ctrl+` `` on Windows/Linux, or ``Cmd+` `` on Mac).
+  - Confirm that your terminal is running inside your project folder. If not, navigate there using `cd path/to/project`.
+  - Ensure your conda environment is active with `conda activate lab-automation`.
+  - Run:
+    ```bash
+    git pull
+    ```
+    This command will fetch and merge the latest updates from the course repository into your local copy.
+  - If you encounter any merge conflicts, resolve them before continuing. Most often, this happens if you edited files that were also updated in the repo.
+  - After pulling, re-open or refresh your Jupyter Notebook files to ensure you are working from the latest versions.
 
 
 ---
