@@ -190,7 +190,7 @@ In this class, we encourage you to **try the above installation and run Pylabrob
 We are periodically improving the workshops, so to make sure you always have the most recent versions of the course materials and workshops:
 
 - **From VS Code**
-  - Open the integrated terminal in VS Code (``Ctrl+` `` on Windows/Linux, or ``Cmd+` `` on Mac).
+  - Open the integrated terminal in VS Code (``Ctrl+ `` on Windows/Linux, or ``Cmd+ `` on Mac).
   - Confirm that your terminal is running inside your project folder. If not, navigate there using `cd path/to/project`.
   - Ensure your conda environment is active with `conda activate lab-automation`.
   - Run:
