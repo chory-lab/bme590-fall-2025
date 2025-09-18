@@ -185,12 +185,12 @@ In this class, we encourage you to **try the above installation and run Pylabrob
 
 ---
 
-## Step 6. Updating to the Latest Workshop Versions
+## Step 6. Updating to the Latest Version
 
 We are periodically improving the workshops, so to make sure you always have the most recent versions of the course materials and workshops:
 
 - **From VS Code**
-  - Open the integrated terminal in VS Code (``Ctrl+ `` on Windows/Linux, or ``Cmd+ `` on Mac).
+  - Open the integrated terminal in VS Code (``Ctrl+` `` on Windows/Linux, or ``Cmd+` `` on Mac).
   - Confirm that your terminal is running inside your project folder. If not, navigate there using `cd path/to/project`.
   - Ensure your conda environment is active with `conda activate lab-automation`.
   - Run:
@@ -201,6 +201,21 @@ We are periodically improving the workshops, so to make sure you always have the
   - If you encounter any merge conflicts, resolve them before continuing. Most often, this happens if you edited files that were also updated in the repo.
   - After pulling, re-open or refresh your Jupyter Notebook files to ensure you are working from the latest versions.
 
+**Reminder: Always copy workshops into your `assignments/` folder**
+
+To prevent overwriting your work when updating workshops, make sure you copy workshop files into your `assignments/` folder before working on them:
+
+- For each lab, copy the relevant workshop into your assignments folder:
+  ```bash
+  cp workshops/<name_of_workshop>.ipynb assignments/
+  ```
+
+- Move into the assignments folder and work there:
+  ```bash
+  cd assignments
+  ```
+
+For all intents and purposes, treat `assignments/` as your working directory. This ensures you keep your progress safe while still being able to pull the latest updates to the original workshops.
 
 ---
 
