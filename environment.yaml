@@ -7,5 +7,6 @@ dependencies:
   - jupyter
   - jsonschema
   - pip
+  - pandas
   - pip:
     - "-e ./pylabrobot[visualizer,opentrons]"
